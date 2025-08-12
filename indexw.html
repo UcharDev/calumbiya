@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Columbia School — Calubbiya School</title>
+  <style>
+    :root{--accent:#2b6cb0;--muted:#6b7280;--card:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Roboto,Arial;margin:0;background:#f3f4f6;color:#111}
+    header{background:linear-gradient(90deg,var(--accent),#4c9bd6);color:#fff;padding:28px 20px}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    h1{margin:0 0 6px;font-size:28px}
+    p.lead{margin:0;font-size:14px;opacity:.95}
+    nav{margin-top:12px}
+    nav a{color:rgba(255,255,255,.95);margin-right:12px;text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center;margin-top:18px}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 20px rgba(15,23,42,.08)}
+
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}
+    .feature h3{margin:0 0 8px}
+    .teachers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px}
+    .teacher{display:flex;gap:12px;align-items:center}
+    .teacher img{width:80px;height:80px;border-radius:10px;object-fit:cover}
+    .teacher h4{margin:0}
+    footer{background:#0f1724;color:#fff;padding:20px;margin-top:28px}
+
+    /* registration */
+    .register-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:14px;border-radius:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:none;font-weight:700;cursor:pointer}
+    .btn.secondary{background:#e6eef9;color:var(--accent);font-weight:700}
+
+    /* payment */
+    .payment-methods{display:flex;gap:10px}
+    .pm{padding:10px;border-radius:8px;border:1px solid #e6edf8;background:#fff}
+
+    /* responsive */
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+    /* modal */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,.5);z-index:50}
+    .modal.open{display:flex}
+    .modal .modal-card{width:100%;max-width:520px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #d1d5db;margin-bottom:12px}
+    .row{display:flex;gap:10px}
+    .row .col{flex:1}
+    .small{font-size:12px;color:var(--muted)}
+    .success{background:#ecfdf5;border:1px solid #bbf7d0;padding:10px;color:#065f46;border-radius:8px}
+    .danger{background:#fff5f5;border:1px solid #fecaca;padding:10px;color:#991b1b;border-radius:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1> Columbia School</h1>
+      <p class="lead">Specialized courses in English, Chemistry/Biology and Mathematics — small groups, experienced teachers.</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#pricing">Pricing & Payment</a>
+        <a href="#location">Location</a>
+        <a href="#register">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h2>Why choose Columbia School?</h2>
+          <p>We focus on exam preparation and deep understanding in three main directions: Mathematics, English language, and Chemistry/Biology. Personal approach, small groups, and flexible schedules.</p>
+          <div class="features">
+            <div class="feature card">
+              <h3>Small groups</h3>
+              <p class="small">Max 8–12 students per class to ensure attention to each learner.</p>
+            </div>
+            <div class="feature card">
+              <h3>Experienced teachers</h3>
+              <p class="small">All teachers have proven track records in teaching and exam prep.</p>
+            </div>
+            <div class="feature card">
+              <h3>Flexible payment</h3>
+              <p class="small">Pay by card online (simulated) or in cash at the school.</p>
+            </div>
+          </div>
+        </div>
+
+        <section id="teachers" style="margin-top:12px">
+          <h2>Our Teachers</h2>
+          <div class="teachers">
+            <div class="card teacher">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Teacher">
+              <div>
+                <h4>Mr. Otabek — Mathematics (Senior)</h4>
+                <p class="small">10+ years teaching algebra, calculus and olympiad training. Focus on problem-solving and exam strategy.</p>
+              </div>
+            </div>
+
+            <div class="card teacher">
+              <img src="https://images.unsplash.com/photo-1544005315-8a3f6d8e3d5b?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Teacher">
+              <div>
+                <h4>Ms. Nigora — Mathematics (Practice)</h4>
+                <p class="small">Worked with school-level and university prep students. Emphasis on step-by-step mastering.</p>
+              </div>
+            </div>
+
+            <div class="card teacher">
+              <img src="https://images.unsplash.com/photo-1545996124-1b0b6d0d9b1c?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Teacher">
+              <div>
+                <h4>Mr. Jamshid — English (Grammar & Speaking)</h4>
+                <p class="small">IELTS and school English specialist. Conversational practice and grammar refinement.</p>
+              </div>
+            </div>
+
+            <div class="card teacher">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Teacher">
+              <div>
+                <h4>Ms. Dilnoza — English (Writing & Exams)</h4>
+                <p class="small">Focus on writing, reading comprehension and exam techniques.</p>
+              </div>
+            </div>
+
+            <div class="card teacher">
+              <img src="https://images.unsplash.com/photo-1531123414780-f89a8b7f0f4a?q=80&w=400&auto=format&fit=crop&crop=faces" alt="Teacher">
+              <div>
+                <h4>Dr. Sardor — Chemistry & Biology</h4>
+                <p class="small">University background in biochemistry. Practical experiments and concept-driven teaching.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="card">
+        <h3>Quick actions</h3>
+        <p class="small">Open registration or choose a payment method below.</p>
+        <div style="margin-top:10px">
+          <button class="btn" onclick="openRegister()">Ro'yxatdan o'tish</button>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #eef2ff">
+        <h4>Pricing (sample)</h4>
+        <p class="small">Per month: Mathematics — 120 USD; English — 100 USD; Chemistry/Biology — 110 USD. (Local currency pricing available at centre)</p>
+
+        <div style="margin-top:10px">
+          <h4>To'lov</h4>
+          <div class="payment-methods">
+            <div class="pm">
+              <strong>Card (online)</strong>
+              <p class="small">Secure card payment (demo). Click to simulate payment.</p>
+              <button class="btn secondary" onclick="openPayment('card')">Pay by Card</button>
+            </div>
+            <div class="pm">
+              <strong>Cash</strong>
+              <p class="small">Pay cash at the school reception. After registration, we'll hold your seat for 3 days.</p>
+              <button class="btn secondary" onclick="openPayment('cash')">Choose Cash</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </section>
+
+    <section id="about" style="margin-top:18px">
+      <h2>About Columbia School</h2>
+      <div class="card">
+        <p>Columbia School (Calubbiya School) is a private educational centre focused on helping students excel in Mathematics, English, and Chemistry/Biology. Our mission is to provide high-quality instruction, exam preparation, and guidance for further studies. Classes are organized as weekly sessions with practice tasks and mock exams.</p>
+      </div>
+    </section>
+
+    <section id="pricing" style="margin-top:18px">
+      <h2>Pricing & Enrollment</h2>
+      <div class="card">
+        <p class="small">Choose the subject you want to enroll in and click "Ro'yxatdan o'tish". You may pay online by card (simulation) or in cash at the school. After a successful registration, you will receive an automatic confirmation on the page and a downloadable registration CSV with the information you submitted.</p>
+      </div>
+    </section>
+
+    <section id="location" style="margin-top:18px">
+      <h2>Location</h2>
+      <div class="card">
+        <p class="small">Manzil (example): Amir Temur ko'chasi 45, Shaykhontohur tumani, Toshkent sh., Uzbekistan.</p>
+        <!-- Google Maps iframe — editable to your exact coordinates or place ID -->
+        <div style="margin-top:12px">
+          <iframe width="100%" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Amir+Temur+ko%27chasi+45+Tashkent&output=embed"></iframe>
+        </div>
+        <p class="small" style="margin-top:8px">Working hours: Mon–Sat 09:00–18:00. Phone: +998 71 123 45 67 | Email: info@columbiaschool.uz</p>
+      </div>
+    </section>
+
+    <section id="register" style="margin-top:18px">
+      <h2>Register Now</h2>
+      <div class="card register-bar">
+        <div>
+          <strong>Quick Registration</strong>
+          <p class="small">Click below to open the registration form.</p>
+        </div>
+        <div>
+          <button class="btn" onclick="openRegister()">Ro'yxatdan o'tish</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>
+        <strong>Columbia School</strong>
+        <div class="small">Amir Temur ko'chasi 45, Tashkent — Call: +998 71 123 45 67</div>
+      </div>
+      <div>
+        <button class="btn" onclick="openRegister()">Ro'yxatdan o'tish</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="modal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-card card" style="padding:18px">
+      <button style="float:right;background:none;border:none;font-weight:700;cursor:pointer" onclick="closeModal()">✕</button>
+      <div id="modal-body">
+        <!-- content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple client-side "database" of registrations
+    const registrations = [];
+
+    function openRegister(){
+      const html = `
+        <h3>Ro'yxatdan o'tish</h3>
+        <p class=\"small\">Iltimos barcha ma'lumotlarni to'ldiring.</p>
+        <label>Ism</label><input id=\"first\" placeholder=\"Ismingiz\"> 
+        <label>Familiya</label><input id=\"last\" placeholder=\"Familiyangiz\"> 
+        <label>Telefon raqam</label><input id=\"phone\" placeholder=\"+998 90 123 45 67\"> 
+        <label>Fanni tanlang</label>
+        <select id=\"subject\"> 
+          <option value=\"Mathematics\">Mathematics</option>
+          <option value=\"English\">English</option>
+          <option value=\"Chemistry/Biology\">Chemistry/Biology</option>
+        </select>
+        <label>To'lov usuli</label>
+        <select id=\"paymethod\"> 
+          <option value=\"cash\">Cash (pay at centre)</option>
+          <option value=\"card\">Card (online demo)</option>
+        </select>
+        <div style=\"display:flex;gap:8px;justify-content:flex-end;margin-top:8px\">
+          <button class=\"btn secondary\" onclick=\"closeModal()\">Bekor qilish</button>
+          <button class=\"btn\" onclick=\"submitRegistration()\">Ro'yxatdan o'tish</button>
+        </div>
+      `;
+      document.getElementById('modal-body').innerHTML = html;
+      document.getElementById('modal').classList.add('open');
+    }
+
+    function closeModal(){
+      document.getElementById('modal').classList.remove('open');
+    }
+
+    function submitRegistration(){
+      const first = document.getElementById('first').value.trim();
+      const last = document.getElementById('last').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value;
+      const paymethod = document.getElementById('paymethod').value;
+      if(!first||!last||!phone){
+        alert('Iltimos barcha maydonlarni toldiring');
+        return;
+      }
+      const reg = {first,last,phone,subject,paymethod,ts:new Date().toISOString()};
+      registrations.push(reg);
+
+      if(paymethod==='card'){
+        openPayment('card',reg);
+      } else {
+        // show confirmation and allow CSV download
+        showConfirmation(reg, false);
+      }
+    }
+
+    function openPayment(method, reg){
+      if(method==='card'){
+        const html = `
+          <h3>Card Payment (Demo)</h3>
+          <p class=\"small\">This is a demo card payment — no real money will be charged.</p>
+          <label>Card number</label><input id=\"cardnum\" placeholder=\"4242 4242 4242 4242\"> 
+          <div class=\"row\"> <div class=\"col\"><label>MM/YY</label><input id=\"exp\" placeholder=\"12/34\"></div><div class=\"col\"><label>CVC</label><input id=\"cvc\" placeholder=\"123\"></div></div>
+          <div style=\"display:flex;gap:8px;justify-content:flex-end;margin-top:8px\"> 
+            <button class=\"btn secondary\" onclick=\"closeModal()\">Bekor qilish</button>
+            <button class=\"btn\" onclick=\"processCardPayment(${reg ? 'true' : 'false'})\">To'lash</button>
+          </div>
+        `;
+        document.getElementById('modal-body').innerHTML = html;
+        document.getElementById('modal').classList.add('open');
+      } else {
+        // cash chosen — show info
+        showConfirmation(reg || null, true);
+      }
+    }
+
+    function processCardPayment(hasReg){
+      const cardnum = document.getElementById('cardnum').value.replace(/\s/g,'');
+      const exp = document.getElementById('exp').value;
+      const cvc = document.getElementById('cvc').value;
+      if(!cardnum||!exp||!cvc){alert('Iltimos kart ma\'lumotlarini toldiring');return}
+      // basic Luhn check
+      if(!luhnCheck(cardnum)) { alert('Kart raqami noto\'g\'ri'); return }
+      // success (demo)
+      document.getElementById('modal-body').innerHTML = '<div class="success"><strong>To\'lov muvaffaqiyatli amalga oshirildi (demo).</strong><p class="small">Siz ro\'yxatdan o\'tdingiz. Biz tez orada siz bilan bog\'lanamiz.</p></div><div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn" onclick="downloadCSV()">Registratsiyani yuklab olish</button></div>';
+    }
+
+    function showConfirmation(reg, isCash){
+      const r = reg || registrations[registrations.length-1];
+      document.getElementById('modal-body').innerHTML = `<h3>Ro'yxatga olindi</h3><p class='small'>Rahmat ${r.first} ${r.last}. Fanni tanladingiz: ${r.subject}. To'lov: ${isCash ? 'Cash (pay at centre)' : r.paymethod}.</p><div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px"><button class="btn secondary" onclick="closeModal()">Yopish</button><button class="btn" onclick="downloadCSV()">Registratsiyani yuklab olish</button></div>`;
+    }
+
+    function downloadCSV(){
+      if(!registrations.length){
+        alert('Registratsiyalar topilmadi');return
+      }
+      const rows = ['Ism,Familiya,Telefon,Fan,To\'lov,Timestamp'];
+      registrations.forEach(r=>rows.push(`${escapeCSV(r.first)},${escapeCSV(r.last)},${escapeCSV(r.phone)},${escapeCSV(r.subject)},${escapeCSV(r.paymethod)},${r.ts}`));
+      const csv = rows.join('\n');
+      const blob = new Blob([csv],{type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'columbia_registrations.csv'; a.click(); URL.revokeObjectURL(url);
+    }
+
+    function escapeCSV(s){ return '"'+String(s).replace(/"/g,'""')+'"' }
+
+    // Luhn algorithm for basic card validation
+    function luhnCheck(val) {
+      let sum = 0; let shouldDouble = false;
+      for (let i = val.length - 1; i >= 0; i--) {
+        let digit = parseInt(val.charAt(i), 10);
+        if (shouldDouble) { digit *= 2; if (digit > 9) digit -= 9; }
+        sum += digit; shouldDouble = !shouldDouble;
+      }
+      return (sum % 10) === 0;
+    }
+
+  </script>
+</body>
+</html>
